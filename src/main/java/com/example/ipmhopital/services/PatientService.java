@@ -1,18 +1,36 @@
 package com.example.ipmhopital.services;
 
-import com.example.ipmhopital.models.Act_Medical;
 import com.example.ipmhopital.models.Patient;
-import com.example.ipmhopital.models.Rendez_Vous;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+import java.util.List;
+import java.util.Optional;
 
 public interface PatientService {
-    void saveRendezVous(Rendez_Vous rendezVous, int idPersonnMedic, int idService);
-    void savePaiement(double prix_consultation, int idrv);
+/*
 
-    void updateRendezVous(int idrv);
+    Patient save(Patient patient);
 
-    void deleteRendezVous(int idrv);
+    Optional<Patient> find(Long id);
 
-    Act_Medical consulterActMedic(int idAct_Medical);
+    List<Patient> findAll();
 
+  //  List<Patient> findAll(List<Long> ids);
+
+
+  //  void delete(Long id);
+
+    //void delete(List<Patient> patient);
+
+    void    delete(Long id);
+
+
+
+
+
+    long count();
+*/
 
 }

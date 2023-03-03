@@ -2,8 +2,11 @@ package com.example.ipmhopital.repository;
 
 import com.example.ipmhopital.models.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@Repository
-public interface PatientRepository  extends JpaRepository<Patient, Integer> {
+import java.util.List;
+
+@RepositoryRestResource
+public interface PatientRepository extends JpaRepository<Patient, Long> {
+
 }

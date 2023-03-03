@@ -18,8 +18,8 @@ public class Patient  implements Serializable {
     private  String nom;
     private  String adresse;
     private  String telephone;
-    @OneToOne(mappedBy = "patient")
-    private Rendez_Vous rendezVous;
+//    @OneToOne(mappedBy = "patient")
+//    private Rendez_Vous rendezVous;
 
     @ManyToOne()
     @JoinColumn(name ="idPersonnMedical",nullable = false,referencedColumnName = "id_PersonnMedical")

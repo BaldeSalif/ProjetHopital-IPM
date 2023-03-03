@@ -24,9 +24,9 @@ public class Rendez_Vous  implements Serializable {
 
     @OneToMany(mappedBy = "rendezVous")
     private Collection<Paiement> paiements;
-    @OneToOne()
-    @JoinColumn(name = "idPatient",nullable = false,referencedColumnName = "id_Patient")
-    private Patient patient;
+//    @OneToOne()
+//    @JoinColumn(name = "idPatient",nullable = false,referencedColumnName = "id_Patient")
+//    private Patient patient;
 
     @ManyToOne()
     @JoinColumn(name = "idPersonnMedical",nullable = false,referencedColumnName = "id_PersonnMedical")

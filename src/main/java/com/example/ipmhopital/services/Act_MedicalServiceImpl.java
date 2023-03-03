@@ -1,4 +1,9 @@
 package com.example.ipmhopital.services;
 
-public class Act_MedicalServiceImpl {
+import org.springframework.stereotype.Service;
+;
+
+@Service
+public class Act_MedicalServiceImpl implements Act_MedicalService {
+
 }

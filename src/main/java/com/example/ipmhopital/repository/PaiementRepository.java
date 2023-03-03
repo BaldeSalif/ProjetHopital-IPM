@@ -2,8 +2,8 @@ package com.example.ipmhopital.repository;
 
 import com.example.ipmhopital.models.Paiement;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@Repository
-public interface PaiementRepository  extends JpaRepository<Paiement, Integer> {
+@RepositoryRestResource
+public interface PaiementRepository extends JpaRepository<Paiement, Long> {
 }

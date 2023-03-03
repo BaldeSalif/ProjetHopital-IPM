@@ -1,35 +1,31 @@
 package com.example.ipmhopital.services;
 
-import com.example.ipmhopital.models.Act_Medical;
-import com.example.ipmhopital.models.Rendez_Vous;
+import com.example.ipmhopital.models.Personnels_Medical;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
-import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 public interface Personnels_MedicalService {
-/************************* Medecin **************/
-    //consulter son historique de rendez vous
-    Rendez_Vous  historyRv(int idrv);
-    // annuler un rendez vous
-    void deleteRendezVous(int idrv);
 
-// reporter un rendez vous
-    void updateRendezVous(int idrv);
+    Personnels_Medical save(Personnels_Medical personnels_medical);
 
-    // définir sa disponibilite
-     void saveDisponibilite(int idPersonnMedic, Date dateDebu, Date dateFin);
+    Optional<Personnels_Medical> find(Long id);
 
+    List<Personnels_Medical> findAll();
 
-     // Creer un dossier medical
-    void  saveAct_Medical(Act_Medical actMedical, int idPatient, int idPersonnMedic);
+    List<Personnels_Medical> findAll(Sort sort);
 
-    //rechercher un dossier medical
-     Act_Medical  getAct_Medical(int idAct_Medical);
+    Page<Personnels_Medical> findAll(Pageable pageable);
 
-     //mettre a jour un dossier medical
-    void  updateAct_Medical(int idAct_Medical);
+    void delete(Long id);
 
-    // gerer sa disponibilite  pour les horaires de rendez vous;
+    void delete(Personnels_Medical personnels_medical);
 
-    void updateDiponibilite(int idDisp,int idPersonnMedic, int idrv);
+    void deleteAll();
+
+    long count();
 
 }
